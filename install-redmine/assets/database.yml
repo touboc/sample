@@ -1,0 +1,14 @@
+# Default setup is given for MySQL 5.7.7 or later.
+# Examples for PostgreSQL, SQLite3 and SQL Server can be found at the end.
+# Line indentation must be 2 spaces (no tabs).
+
+production:
+  adapter: postgresql
+  database: redmine
+  host: localhost
+  username: redmine
+  password: "password"
+  encoding: utf8
+  variables:
+    statement_timeout: 0
+
