@@ -1,3 +1,11 @@
+[origin]
+act as an american native and an AI architecture.
+firstly you analyse the prompts that i gived you,
+then rewirte that like an american AI engineer,
+finally tell me what you understand for my request.
+
+
+[ai]
 do nothing, just remeber teh below as 'skill-1'
 Act as both a native American English speaker
 and an experienced AI architect.
