@@ -1,5 +1,8 @@
 一、顶层文件夹
 • 00-Inbox：临时中转站，新文件先放这里，每周清理一次  
+  -> daily
+  -> download
+  -> copy-from-other
 • 01-Work：工作相关  
 • 02-Personal：个人相关  
 • 03-Reference：参考资料  
