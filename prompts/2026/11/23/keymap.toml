@@ -1,0 +1,43 @@
+[mgr]
+prepend_keymap = [
+	# よく使うフォルダへ移動
+	{ on = ["g", "h"], run = "cd ~", desc = "ホームフォルダへ" },
+	{ on = ["g", "d"], run = "cd ~/Downloads", desc = "ダウンロードへ" },
+	{ on = ["g", "o"], run = "cd ~/Documents", desc = "ドキュメントへ" },
+	{ on = ["g", "t"], run = "cd ~/Desktop", desc = "デスクトップへ" },
+	{ on = ["g", "c"], run = "cd ~/.config", desc = "設定フォルダへ" },
+
+	# 削除とごみ箱
+	{ on = ["d"], run = "remove", desc = "ごみ箱へ移動" },
+	{ on = ["D"], run = "remove --permanently", desc = "完全に削除" },
+
+	# タブ
+	{ on = ["t"], run = "tab_create --current", desc = "新しいタブ" },
+	{ on = ["w"], run = "tab_close", desc = "タブを閉じる" },
+	{ on = ["["], run = "tab_switch -1 --relative", desc = "前のタブ" },
+	{ on = ["]"], run = "tab_switch 1 --relative", desc = "次のタブ" },
+
+	# 並べ替え
+	{ on = [",", "n"], run = ["sort natural --reverse=no", "linemode size"], desc = "自然順" },
+	{ on = [",", "m"], run = ["sort mtime --reverse", "linemode mtime"], desc = "更新日時（新しい順）" },
+	{ on = [",", "s"], run = ["sort size --reverse", "linemode size"], desc = "サイズ（大きい順）" },
+	{ on = [",", "e"], run = "sort extension", desc = "拡張子順" },
+
+	# システム操作
+	{ on = ["<C-r>"], run = "reveal", desc = "現在のファイルの場所を表示" },
+	{ on = ["<C-s>"], run = "shell --block --confirm", desc = "現在のフォルダでシェルを開く" },
+	{ on = ["<C-h>"], run = "hidden toggle", desc = "隠しファイルの表示切替" },
+	{ on = ["<C-p>"], run = "plugin fzf", desc = "fzf であいまい検索して移動" },
+	{ on = ["z"], run = "plugin zoxide", desc = "zoxide でスマート移動" },
+	{ on = ["Z"], run = "plugin fzf", desc = "fzf でファイル検索" },
+]
+
+[tasks]
+prepend_keymap = [
+	{ on = ["<Esc>"], run = "close", desc = "タスク画面を閉じる" },
+]
+
+[input]
+prepend_keymap = [
+	{ on = ["<Esc>"], run = "close", desc = "入力欄を閉じる" },
+]

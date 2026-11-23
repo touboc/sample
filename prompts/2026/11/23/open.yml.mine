@@ -1,0 +1,9 @@
+rules:
+  - name: open_text_files_with_sakura
+    ext:
+      - txt
+      - md
+      - log
+      - ini
+    run: '"C:\Program Files (x86)\sakura\sakura.exe" "%1"'
+    block: true
